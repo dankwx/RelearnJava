@@ -9,7 +9,7 @@ public class ArrayLearning {
         int option = 0;
         Scanner scanner = new Scanner(System.in);
 
-        List<String> cores = new ArrayList<String>();
+        List<String> filmes = new ArrayList<>();
 
 
         while (programActive) {
@@ -35,18 +35,38 @@ public class ArrayLearning {
             }
             switch (option) {
                 case 1:
-                    for (String cor : cores) {
+                    for (String cor : filmes) {
                         System.out.println(cor);
                     }
                     break;
                 case 2:
                     System.out.println("Que filme deseja adicionar?");
                     String filme = scanner.nextLine();
-                    cores.add(filme);
+                    filmes.add(filme);
                     break;
                 case 3:
-                    System.out.println("Escolheu remover filme");
-                    break;
+                    if (!filmes.isEmpty()) {
+                        System.out.println("Que filme deseja remover?");
+                        for (int i = 0; i < filmes.size(); i++) {
+                            System.out.println(i + ". " + filmes.get(i));
+                        }
+                        if (scanner.hasNextInt()) {
+                            int escolha = scanner.nextInt();
+                            scanner.nextLine();
+                            if (escolha <= filmes.size()) {
+                                filmes.remove(escolha);
+                            } else {
+                                System.out.println("Escolha um número de 0 a " + filmes.size());
+                                scanner.next();
+                            }
+                        } else {
+                            System.out.println("Insira um número.");
+                            scanner.next();
+                        }
+                        break;
+                    } else {
+                        System.out.println("Ainda não há filmes na lista.");
+                    }
                 case 4:
                     System.out.println("Até mais!");
                     programActive = false;
