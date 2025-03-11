@@ -5,19 +5,21 @@ public class TicTacToe {
         ArrayList<ArrayList<String>> ticTacToe = new ArrayList<>();
 
         ArrayList<String> leftColumn = new ArrayList<>();
-        leftColumn.add("a");
-        leftColumn.add("b");
-        leftColumn.add("c");
+        leftColumn.add(" a |");
+        leftColumn.add(" b |");
+        leftColumn.add(" c ");
 
         ArrayList<String> middleColumn = new ArrayList<>();
-        middleColumn.add("d");
-        middleColumn.add("e");
-        middleColumn.add("f");
+        middleColumn.add(" d |");
+        middleColumn.add(" e |");
+        middleColumn.add(" f ");
+
+
 
         ArrayList<String> rightColumn = new ArrayList<>();
-        rightColumn.add("j");
-        rightColumn.add("k");
-        rightColumn.add("l");
+        rightColumn.add(" j |");
+        rightColumn.add(" k |");
+        rightColumn.add(" l ");
 
         ticTacToe.add(leftColumn);
         ticTacToe.add(middleColumn);
@@ -33,7 +35,7 @@ public class TicTacToe {
         }
         System.out.println("");
         for (int k = 0; k < ticTacToe.get(2).size(); k++) {
-            System.out.print(ticTacToe.get(1).get(k));
+            System.out.print(ticTacToe.get(2).get(k));
         }
     }
 }
