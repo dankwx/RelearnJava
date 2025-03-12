@@ -14,8 +14,6 @@ public class TicTacToe {
         middleColumn.add(" e |");
         middleColumn.add(" f ");
 
-
-
         ArrayList<String> rightColumn = new ArrayList<>();
         rightColumn.add(" j |");
         rightColumn.add(" k |");
@@ -24,7 +22,6 @@ public class TicTacToe {
         ticTacToe.add(leftColumn);
         ticTacToe.add(middleColumn);
         ticTacToe.add(rightColumn);
-
 
         for (int i = 0; i < ticTacToe.get(0).size(); i++) {
             System.out.print(ticTacToe.get(0).get(i));
